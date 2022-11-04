@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  background-color: white;
+
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid  #fffbc8;
+  background-color:  #EBD4A2;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #fffbc8;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #fffbc8;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #fffbc8;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Food Desert</h1>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Introduction')">Introduction</button>
+  <button class="tablinks" onclick="openCity(event, 'Health')">Health</button>
+  <button class="tablinks" onclick="openCity(event, 'Race')">Race</button>
+  <button class="tablinks" onclick="openCity(event, 'Economics')">Economics</button>
+</div>
+
+<div id="Introduction" class="tabcontent" style="display:block">
+  <h3>Introduction</h3>
+  <p>Welcome to our Food Desert Tool. The United States Department of Agriculture defines food deserts as an area where a large proportion of households have low incomes, inadequate access to transportation, and limited stores selling groceries at affordable prices. <br>
+    On this page you will find some basic information about food deserts in the country. The left hand side contains maps where you can select a state at “Country Level”, which will render a zoomed in version of the state in the “State Zoom-in.” You can then click on a county in the “State Zoom-in” map to see the different census tracts (as defined by the United States Census Bureau. The right hand side of the page shows gives some overall information about the top “worse of” states, tracts, and the distribution of food deserts in urban areas.
+  </p>
+  <div class='tableauPlaceholder' id='viz1666928933869' style='position: relative'><noscript><a href='#'><img alt='DB1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HT&#47;HTY3NMT93&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;HTY3NMT93' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;HT&#47;HTY3NMT93&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1666928933869');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1927px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</div>
+
+<div id="Health" class="tabcontent">
+  <h3>Health</h3>
+  <p>Previous research shows that living in a food desert has an impact on the population’s health outcomes, specifically in relation to the prevalence of stroke, diabetes, and teeth loss[1][2]. The health outcome navigator page allows the users to explore the percentage of three health conditions in the food desert and non-desert areas at various geospatial levels and their association with race. </p> 
+  <div class='tableauPlaceholder' id='viz1666929102065' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project_2_16668231448750&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='project_2_16668231448750&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;project_2_16668231448750&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1666929102065');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1527px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <p> Another perspective was to combine health and race to see if there was any relation. 
+    Utilizing a bucket technique we could look into what percent of the race was in each bucket of stroke and teeth lost values.
+    We did this comparison between race at 1 mile and compared at 10 miles. 
+    Currently only the top buckets are selecte.
+    </p>
+
+  <div class='tableauPlaceholder' id='viz1666995825560' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;FoodDesert_Dashboard&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FoodDesert_Dashboard&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;FoodDesert_Dashboard&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1666995825560');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='100px';vizElement.style.maxWidth='6000px';vizElement.style.width='100%';vizElement.style.minHeight='527px';vizElement.style.maxHeight='7027px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='100px';vizElement.style.maxWidth='6000px';vizElement.style.width='100%';vizElement.style.minHeight='527px';vizElement.style.maxHeight='7027px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1427px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <p><b>References:</b> <br>
+    [1] Kelli, H. M., N. Hammadah, et al. (2017). "Association Between Living in Food Deserts and Cardiovascular Risk." Circ Cardiovasc Qual Outcomes 10(9): e003532.
+    [2] Gundersen, C. and J. P. Ziliak (2015). "Food Insecurity And Health Outcomes." Health Affairs 34(11): 1830-1839.
+    </p>
+</div>
+
+<div id="Race" class="tabcontent">
+  <h3>Race Data-Statewise Distribution</h3>
+  <p>The race data shown here summarizes the distribution of population in food deserts, classified into 'Urban' and 'Rural' areas. In order to see the summary of the population distribution, please hover over or point at a state. The tool tip will show a bar graph summary of different races in the chosen state.</p>
+  <div class='tableauPlaceholder' id='viz1667083540912' style='position: relative'><noscript><a href='#'><img alt='Race_State Distribution ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CF&#47;CF3WZCNHB&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;CF3WZCNHB' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CF&#47;CF3WZCNHB&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1667083540912');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <h3>Race Data-County wise Distribution</h3>
+  <p>In this visualization, population distribution for different races is visualized at the county level for both 'Urban' and 'Rural' areas considered food deserts. Hovering over or pointing at a county will show a bar chart tool tip summary of different races in that county.</p>
+  <div class='tableauPlaceholder' id='viz1667083684790' style='position: relative'><noscript><a href='#'><img alt='Race_County Distribution ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CP&#47;CPD4TXDSK&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;CPD4TXDSK' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CP&#47;CPD4TXDSK&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1667083684790');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1366px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='827px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</div>
+
+<div id="Economics" class="tabcontent">
+  <h3>Economy, health and race in food deserts</h3>
+  <p>It's important to acknowledge and better understand the interplay between economic, health, race and food desert factors. This page explores that interplay by allowing selection of a subset of counties (scatterplot points) to filter the bars at the bottom. The health metric is the average incidence rate of three health issues thought to be associated with limited healthy food access.</p>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  </head>
+  <body>
+    <div id="vis"></div>
+    <script type="text/javascript">
+      var yourVlSpec = 'https://gist.githubusercontent.com/c-mcst/9bc0562c234d93aad5c928c77c83afc0/raw/0b2f8aad90848cc94161a54d694ab223e6dab7b3/chart_spec.json';
+      vegaEmbed('#vis', yourVlSpec);
+    </script>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
