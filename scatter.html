@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  background-color: white;
+
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid  #fffbc8;
+  background-color:  #EBD4A2;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #fffbc8;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #fffbc8;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #fffbc8;
+  border-top: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Food Desert</h1>
+
+<div id="Economics" class="tabcontent">
+  <h3>Economy, health and race in food deserts</h3>
+  <p>It's important to acknowledge and better understand the interplay between economic, health, race and food desert factors. This page explores that interplay by allowing selection of a subset of counties (scatterplot points) to filter the bars at the bottom. The race graph shows the number of people from each race group in the selected data. The health metric is the average incidence rate of three health issues thought to be associated with limited healthy food access in the selected data. <br><br> To use this tool, you can hover over individual points on the scatterplot to learn about them. You can also click and drag to select a subset of points, which will filter the graphs below to allow insight into the details of the selected counties.</p>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+  </head>
+  <body>
+    <div id="vis"></div>
+    <script type="text/javascript">
+      var yourVlSpec = 'https://gist.githubusercontent.com/c-mcst/9bc0562c234d93aad5c928c77c83afc0/raw/027d485210534f1cd179db3cb3baa545682a27ae/chart_spec.json';
+      vegaEmbed('#vis', yourVlSpec);
+    </script>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
