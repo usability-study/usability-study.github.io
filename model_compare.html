@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style>
+    h2   {font-family: sans-serif;}
+    h3   {font-family: sans-serif;}
+    p   {font-family: sans-serif;}
+    </style>
+</head>
+<body>
+<div id="about">
+    <h2>In-Depth Model Comparison</h2>
+    <h3>How to use this tool</h3>
+    <p>
+        Select a site from the dropdown in the bottom left. The chart will 
+        update to show all model predictions for that site, as well as some
+        metrics about the model performance on that particular site in the 
+        table below. 
+        <br><br>
+        Hover over the lines to show model predictions at that point. Zoom and 
+        pan by scrolling and clicking + dragging. Double click anywhere on the 
+        line chart to go back to original zoom.
+    </p>
+    <h3>About</h3>
+    <p> 
+        As we described in the  
+        <a href="/ch4cast/about">about page</a>, we set aside several 
+        FLUXNET sites for model testing. None of the models were trained on 
+        this data, and only once we had finalized our three models did we 
+        use them to make predictions on the test data. Therefore, the 
+        predictions based on this data are the best indicators we have of model 
+        performance. 
+        <br><br> 
+        Because we eliminated any gaps larger than two months
+        from the data, some FLUXNET sites were split into multiple, continuous
+        time series. The site IDs available here reflect the original FLUXNET 
+        site ID, with an underscore and an integer appended to indicate which
+        of the continuous time series within that site it is. For example, 
+        "BR-Npw_0" is the first continous time series for the "BR-Npw" 
+        FLUXNET site, and "BR-Npw_1" is the second.
+        <br><br><br>
+    </p>
+
+
+</div>
+<div id="vis"></div>
+
+<script type="text/javascript">
+  var spec = "dashboard_spec.json";
+  vegaEmbed('#vis', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>

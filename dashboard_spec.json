@@ -1,0 +1,476 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json",
+  "bounds": "full",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "params": [
+    {
+      "bind": {
+        "input": "select",
+        "name": "Site:   ",
+        "options": [
+          "BR-Npw_0",
+          "BR-Npw_1",
+          "FI-Lom_0",
+          "FI-Si2_0",
+          "FI-Si2_1",
+          "FI-Si2_2",
+          "FI-Si2_4",
+          "FI-Si2_5",
+          "FR-LGt_0",
+          "FR-LGt_1",
+          "JP-SwL_0",
+          "KR-CRK_0",
+          "US-A03_0",
+          "US-A03_1",
+          "US-A03_2",
+          "US-Atq_0",
+          "US-Atq_1",
+          "US-Beo_0",
+          "US-LA1_0",
+          "US-LA2_0",
+          "US-LA2_1",
+          "US-Snd_0",
+          "US-Snd_1",
+          "US-Tw4_0"
+        ]
+      },
+      "name": "Site:   ",
+      "select": {
+        "fields": [
+          "grouping_var"
+        ],
+        "type": "point"
+      },
+      "value": "BR-Npw_0",
+      "views": [
+        "view_330",
+        "view_332",
+        "view_333",
+        "view_334",
+        "view_335",
+        "view_336"
+      ]
+    },
+    {
+      "name": "param_67",
+      "select": {
+        "fields": [
+          "TIMESTAMP"
+        ],
+        "nearest": true,
+        "on": "mouseover",
+        "type": "point"
+      },
+      "views": [
+        "view_331"
+      ]
+    }
+  ],
+  "vconcat": [
+    {
+      "data": {
+        "format": {
+          "type": "json"
+        },
+        "url": "altair-data-18aab949c502512b57177af60177b29f.json"
+      },
+      "height": 300,
+      "layer": [
+        {
+          "encoding": {
+            "color": {
+              "field": "Model Type",
+              "type": "nominal"
+            },
+            "x": {
+              "field": "TIMESTAMP",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "value",
+              "title": "Methane Flux",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "type": "line"
+          },
+          "name": "view_330",
+          "transform": [
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "color": {
+              "value": "#ffffff"
+            },
+            "opacity": {
+              "condition": {
+                "empty": false,
+                "param": "param_67",
+                "value": 1
+              },
+              "value": 0
+            },
+            "x": {
+              "field": "TIMESTAMP",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "value",
+              "title": "Methane Flux",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "align": "right",
+            "height": 15,
+            "type": "rect",
+            "width": 40
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "opacity": {
+              "value": 0
+            },
+            "x": {
+              "field": "TIMESTAMP",
+              "type": "temporal"
+            }
+          },
+          "mark": {
+            "type": "point"
+          },
+          "name": "view_331",
+          "transform": [
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Model Type",
+              "type": "nominal"
+            },
+            "opacity": {
+              "condition": {
+                "empty": false,
+                "param": "param_67",
+                "value": 1
+              },
+              "value": 0
+            },
+            "x": {
+              "field": "TIMESTAMP",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "value",
+              "title": "Methane Flux",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "type": "point"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "x": {
+              "field": "TIMESTAMP",
+              "type": "temporal"
+            }
+          },
+          "mark": {
+            "color": "gray",
+            "type": "rule"
+          },
+          "transform": [
+            {
+              "filter": {
+                "empty": false,
+                "param": "param_67"
+              }
+            },
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Model Type",
+              "type": "nominal"
+            },
+            "text": {
+              "condition": {
+                "empty": false,
+                "field": "value",
+                "format": ",.2f",
+                "param": "param_67",
+                "type": "quantitative"
+              },
+              "value": " "
+            },
+            "x": {
+              "field": "TIMESTAMP",
+              "type": "temporal"
+            },
+            "y": {
+              "field": "value",
+              "title": "Methane Flux",
+              "type": "quantitative"
+            }
+          },
+          "mark": {
+            "align": "right",
+            "dx": -5,
+            "dy": 0,
+            "fontWeight": "bold",
+            "type": "text"
+          },
+          "transform": [
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        }
+      ],
+      "width": 900
+    },
+    {
+      "data": {
+        "format": {
+          "type": "json"
+        },
+        "url": "altair-data-8818055d462c81ba738bc7f18b8b2382.json"
+      },
+      "hconcat": [
+        {
+          "encoding": {
+            "text": {
+              "field": "Model",
+              "type": "nominal"
+            },
+            "y": {
+              "axis": null,
+              "field": "row_number",
+              "type": "ordinal"
+            }
+          },
+          "mark": {
+            "align": "left",
+            "type": "text"
+          },
+          "name": "view_332",
+          "title": {
+            "align": "left",
+            "text": "Model"
+          },
+          "transform": [
+            {
+              "window": [
+                {
+                  "as": "row_number",
+                  "field": "",
+                  "op": "row_number"
+                }
+              ]
+            },
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "text": {
+              "field": "Mean",
+              "type": "nominal"
+            },
+            "y": {
+              "axis": null,
+              "field": "row_number",
+              "type": "ordinal"
+            }
+          },
+          "mark": {
+            "align": "left",
+            "type": "text"
+          },
+          "name": "view_333",
+          "title": {
+            "align": "left",
+            "text": "Mean"
+          },
+          "transform": [
+            {
+              "window": [
+                {
+                  "as": "row_number",
+                  "field": "",
+                  "op": "row_number"
+                }
+              ]
+            },
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "text": {
+              "field": "Standard Deviation",
+              "type": "nominal"
+            },
+            "y": {
+              "axis": null,
+              "field": "row_number",
+              "type": "ordinal"
+            }
+          },
+          "mark": {
+            "align": "left",
+            "type": "text"
+          },
+          "name": "view_334",
+          "title": {
+            "align": "left",
+            "text": "Standard Deviation"
+          },
+          "transform": [
+            {
+              "window": [
+                {
+                  "as": "row_number",
+                  "field": "",
+                  "op": "row_number"
+                }
+              ]
+            },
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "text": {
+              "field": "RMSE",
+              "type": "nominal"
+            },
+            "y": {
+              "axis": null,
+              "field": "row_number",
+              "type": "ordinal"
+            }
+          },
+          "mark": {
+            "align": "left",
+            "type": "text"
+          },
+          "name": "view_335",
+          "title": {
+            "align": "left",
+            "text": "RMSE"
+          },
+          "transform": [
+            {
+              "window": [
+                {
+                  "as": "row_number",
+                  "field": "",
+                  "op": "row_number"
+                }
+              ]
+            },
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        },
+        {
+          "encoding": {
+            "text": {
+              "field": "MAE",
+              "type": "nominal"
+            },
+            "y": {
+              "axis": null,
+              "field": "row_number",
+              "type": "ordinal"
+            }
+          },
+          "mark": {
+            "align": "left",
+            "type": "text"
+          },
+          "name": "view_336",
+          "title": {
+            "align": "left",
+            "text": "MAE"
+          },
+          "transform": [
+            {
+              "window": [
+                {
+                  "as": "row_number",
+                  "field": "",
+                  "op": "row_number"
+                }
+              ]
+            },
+            {
+              "filter": {
+                "param": "Site:   "
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
